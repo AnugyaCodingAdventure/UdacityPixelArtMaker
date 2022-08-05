@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yellowtail">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 id="PageTitle">Welcome to my Pixel Art Maker!</h1>
+    <h2><span class="light-pink">Create a tabular Design Canvas Grid to color!</span></h2>
+    <div align="center">
+        <form id="colorTableCreator">
+            <div class="box">
+                <div>
+                    <label for="inputHeight">
+                        Canvas height :
+                    </label>
+                    <input type="number" id="inputHeight" aria-label="Canvas Height" placeholder="Canvas Height"
+                        name="height" min="1" max="250" value="15">
+                </div>
+                <div>
+                    <label for="inputWidth">
+                        Canvas width :
+                    </label>
+                    <input type="number" id="inputWidth" aria-label="Canvas width" name="width" min="1" max="250"
+                        value="15">
+                </div>
+                <div>
+                    <input aria-label="submit" type="submit" class="w-100">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="column center">
+                <h2>Pick A Color</h2>
+                <ul>
+                    <li>
+                        Pro Tip:Place mouse pointer on a canvas cell and input number(1-5) to apply corresponding
+                        color
+                        automatically!
+                    </li>
+                    <li>
+                        Pro Tip:Color can also be copied by clicking mouse and dragging it over cells.
+                    </li>
+                    <li>
+                        Double click on colored cells to remove color.
+                    </li>
+                </ul>
+
+                <table class="color-picker-table">
+                    <tr>
+                        <th class="large-font">1</th>
+                        <th class="large-font">2</th>
+                        <th class="large-font">3</th>
+                        <th class="large-font">4</th>
+                        <th class="large-font">5</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="color-container"><input aria-label="color picker" type="color"
+                                    id="color-picker1" class="color-picker" value="#00ced1" data-selected="false"></div>
+                        </td>
+                        <td>
+                            <div class="color-container"><input aria-label="color picker" type="color"
+                                    id="color-picker2" class="color-picker" value="#ff0000" data-selected="false"></div>
+                        </td>
+                        <td>
+                            <div class="color-container"> <input aria-label="color picker" type="color"
+                                    id="color-picker3" class="color-picker" value="#0000ff" data-selected="false"></div>
+                        </td>
+                        <td>
+                            <div class="color-container"><input aria-label="color picker" type="color"
+                                    id="color-picker4" class="color-picker" value="#c71585" data-selected="false"></div>
+                        </td>
+                        <td>
+                            <div class="color-container"><input aria-label="color picker" type="color"
+                                    id="color-picker5" class="color-picker" value="#f6b73c" data-selected="false"></div>
+                        </td>
+                    </tr>
+                </table>
+                <h1 id="h1SelectedColorIndicator">Selected Color</h1>
+            </div>
+        </div>
+        <div class="row canvas-container">
+            <table id="cellCanvas"></table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/designs.js"></script>
+
+</body>
+
+</html>
